@@ -1,8 +1,7 @@
-import Hero from './components/Hero/Hero.js';
-import SearchForm from './components/SearchForm/SearchForm.js';
-import List from './components/List/List.js';
-
-const App = () => {
+import Hero from './components/Hero/Hero';
+import SearchForm from './components/SearchForm/SearchForm';
+import List from './components/List/List';
+const App = ()=> {
   return (
     <div>
       <Hero />
@@ -11,5 +10,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
