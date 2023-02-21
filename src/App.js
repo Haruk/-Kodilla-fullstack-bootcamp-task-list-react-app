@@ -1,18 +1,23 @@
-import Hero from './components/Hero/Hero.js';
-import SearchForm from './components/SearchForm/SearchForm.js';
-import List from './components/List/List.js';
+import { About } from './components/About/About.js';
 import Container from './components/Container/Container.js';
+import { Favourite } from './components/Favourite/Favourite.js';
+import { Home } from './components/Home/Home.js';
+import { Navbar } from './components/Navbar/Navbar.js';
+import { Routes, Route } from 'react-router-dom';
+import { NotFound } from './components/NotFound/NotFound.js';
 
-const App = () => {
+export const App = () => {
   return (
     <div>
+      <Navbar />
       <Container>
-        <Hero />
-        <SearchForm />
-        <List />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/favourite' element={<Favourite />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
       </Container>
     </div>
   );
 };
-
-export default App;
