@@ -1,35 +1,21 @@
-@import '../../styles/settings.scss';
-
 .columnForm {
-  width: 100%;
+  text-align: center;
   padding: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  .columnInputs {
-    @media screen and (max-width: 860px) {
-      width: 100%;
-      text-align: center;
+  span {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .columnForm {
+    text-align: center;
+    padding: 10px;
+    * {
+      margin: 0 auto;
+      display: block;
     }
-    .inputTitle {
-      margin: 0px 10px;
-      @media screen and (max-width: 860px) {
-        display: block;
-      }
+    button {
+      margin-top: 20px;
     }
   }
-
 }
-
-.input {
-    min-width: 200px;
-    background: $color-light;
-    border: 1px solid lighten($color-dark, 60%);
-    padding: $base-size ($base-size * 1.5);
-    margin: 0 0 $base-size 0;
-    font-family: $font-text;
-    border-radius: $radius;
-}
-
